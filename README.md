@@ -117,3 +117,16 @@ NOT IN (SELECT CustomerID FROM Orders)
   - account `name` should be unique.
   - account `budget` is required.
 > This can be done with the CREATE TABLE clause
+> id
+
+>CREATE TABLE accounts (
+    id     INTEGER PRIMARY KEY AUTOINCREMENT
+                   NOT NULL,
+    name   STRING  UNIQUE
+                   NOT NULL,
+    budget DOUBLE  NOT NULL
+);
+CREATE INDEX names ON accounts (
+    name
+);
+
