@@ -74,7 +74,10 @@ Answer the following data queries. Keep track of the SQL you write by pasting it
  WHERE contactname = 'Bilbo Baggins'
 
 ### list orders grouped by customer showing the number of orders per customer. _Rattlesnake Canyon Grocery_ should have 7 orders.
-> This can be done with SELECT, COUNT, JOIN and GROUP BY clauses. Your count should focus on a field in the Orders table, not the Customer table
+> SELECT        Customers.CompanyName, COUNT(Orders.OrderID) AS Expr1
+FROM            Customers INNER JOIN
+                         Orders ON Customers.CustomerID = Orders.CustomerID
+GROUP BY Customers.CompanyName
 
 > There is more information about the COUNT clause on [W3 Schools](https://www.w3schools.com/sql/sql_count_avg_sum.asp)
 
