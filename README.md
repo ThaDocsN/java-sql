@@ -35,8 +35,9 @@ Answer the following data queries. Keep track of the SQL you write by pasting it
   FROM Suppliers
   WHERE length(CompanyName) > 20
 ### find all customers that include the word "market" in the name. Should return 4 records.
-> This can be done with SELECT and a WHERE clause using the LIKE keyword
-
+> SELECT *
+  FROM Customers
+  WHERE companyname LIKE '%market%'
 > Don't forget the wildcard '%' symbols at the beginning and end of your substring to denote it can appear anywhere in the string in question
 
 ### add a customer record for _"The Shire"_, the contact name is _"Bilbo Baggins"_ the address is _"1 Hobbit-Hole"_ in _"Bag End"_, postal code _"111"_ and the country is _"Middle Earth"_.
