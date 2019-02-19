@@ -21,7 +21,9 @@ Answer the following data queries. Keep track of the SQL you write by pasting it
 
 
 ### find the phone number for the supplier with the id 11. Should be (010) 9984510.
-> This can be done with SELECT and WHERE clauses
+> SELECT phone
+  FROM Suppliers
+  WHERE supplierid = "11"
 
 ### list orders descending by the order date. The order with date 1997-02-12 should be at the top.
 > This can be done with SELECT, WHERE, and ORDER BY clauses
