@@ -41,7 +41,32 @@ Answer the following data queries. Keep track of the SQL you write by pasting it
 > Don't forget the wildcard '%' symbols at the beginning and end of your substring to denote it can appear anywhere in the string in question
 
 ### add a customer record for _"The Shire"_, the contact name is _"Bilbo Baggins"_ the address is _"1 Hobbit-Hole"_ in _"Bag End"_, postal code _"111"_ and the country is _"Middle Earth"_.
-> This can be done with the INSERT INTO clause
+>INSERT INTO Customers (
+                          CustomerID,
+                          CompanyName,
+                          ContactName,
+                          ContactTitle,
+                          Address,
+                          City,
+                          Region,
+                          PostalCode,
+                          Country,
+                          Phone,
+                          Fax
+                      )
+                      VALUES (
+                          'CustomerID',
+                          'The Shire',
+                          'Bilbo Baggins',
+                          'ContactTitle',
+                          '1 Hobbit-Hole',
+                          'Bag End',
+                          'Region',
+                          '111',
+                          'Middle Earth',
+                          'Phone',
+                          'Fax'
+                      )
 
 ### update _Bilbo Baggins_ record so that the postal code changes to _"11122"_.
 > This can be done with UPDATE and WHERE clauses
